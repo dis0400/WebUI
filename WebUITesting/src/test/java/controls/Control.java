@@ -9,10 +9,12 @@ public class Control {
     protected WebElement control;
 
     public Control(By locator){
+
         this.locator = locator;
     }
 
     public void getControl(){
+
         control = Session.getInstance().getBrowser().findElement(this.locator);
     }
 

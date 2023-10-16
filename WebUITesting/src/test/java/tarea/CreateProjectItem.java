@@ -16,7 +16,7 @@ public class CreateProjectItem {
     @BeforeEach
     public void open(){
         Session.getInstance().getBrowser().get("http://todo.ly/");
-        // login
+        // Login
         mainPage.loginButton.click();
         loginSection.emailTextBox.setText("brendaaa@gmailm");
         loginSection.emailTextBox.clearSetText("brendaaa@gmail.com");
@@ -28,7 +28,7 @@ public class CreateProjectItem {
         menuSection.addNewProject.click();
         menuSection.nameProject.setText("NewProject");
         menuSection.saveProject.click();
-        // verificacion
+
         Assertions.assertTrue(menuSection.nameProject.isControlDisplayed(),
                 "ERROR no se pudo crear el proyecto");
     }
@@ -38,7 +38,7 @@ public class CreateProjectItem {
         menuSection.selectProject.click();
         menuSection.newItem.setText(nameItem);
         menuSection.addNewItem.click();
-        // verificacion
+
         Assertions.assertTrue(menuSection.newItem.isControlDisplayed(),
                 "ERROR no se pudo crear el item");
     }
@@ -55,6 +55,7 @@ public class CreateProjectItem {
     }
     @AfterEach
     public  void  close(){
+
         Session.getInstance().closeSession();
     }
 }

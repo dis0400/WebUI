@@ -27,7 +27,7 @@ public class LogingTodoist {
         loginSection2.loginButton.click();
 
         Assertions.assertTrue(homepage.todayTitle.isControlDisplayed(),
-                "ERROR no me pude iniciar sesion");
+                "Error no me pude iniciar sesion");
 
     }
 

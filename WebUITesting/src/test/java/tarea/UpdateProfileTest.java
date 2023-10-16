@@ -19,7 +19,7 @@ public class UpdateProfileTest {
     @BeforeEach
     public void open(){
         Session.getInstance().getBrowser().get("http://todo.ly/");
-        // login
+
         mainPage.loginButton.click();
         loginSection.emailTextBox.setText("brendaaa@gmailm");
         loginSection.emailTextBox.clearSetText("brendaaa@gmail.com");
@@ -43,6 +43,6 @@ public class UpdateProfileTest {
         mainPage.settingsButton.click();
         String actualName = settingsLogin.fullName.getValue();
         Assertions.assertEquals("Brendaaaaaa", actualName,
-                "Error: No se actualizó el nombre");
+                "Error No se actualizó el nombre");
     }
 }
